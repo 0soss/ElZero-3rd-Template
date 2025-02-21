@@ -1,0 +1,232 @@
+/* Start Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../webfonts/fa-solid-900.woff2");
+}
+
+:root {
+    --main-color: #2196f3;
+    --section-padding: 100px;
+    --main-transition: 0.3s;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+
+}
+
+/* End Global */
+
+
+/* Start Media Queries */
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+/* End Media Queries */
+
+/* Start Header */
+header {
+    background: white;
+    border-bottom: 1px solid lightgray;
+}
+
+header .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+header .container .logo {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: bold;
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+header .container .main-nav {
+    display: flex;
+}
+
+header .container .main-nav li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 30px;
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+
+header .container .main-nav li a:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+
+header .container .main-nav li .sec-nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    text-align: start;
+    top: 73px;
+    border-bottom: 3px solid var(--main-color);
+}
+
+header .container .main-nav li .sec-nav .image img {
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    header .container .main-nav li .sec-nav .image img {
+        display: none;
+    }
+}
+
+header .container .main-nav li .sec-nav ul {
+    min-width: 250px;
+    flex: 1;
+}
+
+header .container .main-nav li .sec-nav ul li {
+    position: relative;
+}
+
+header .container .main-nav li .sec-nav ul li:not(:last-child) {
+    border-bottom: 1px solid #e9e6e6;
+}
+
+header .container .main-nav li .sec-nav ul a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+header .container .main-nav li .sec-nav ul a i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.header .sec-nav .links li:not(:last-child) {
+    border-bottom: 1px solid #e9e6e6;
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 73px);
+}
+
+.landing .container .image img {
+    width: 600px;
+}
+
+@media (max-width: 993px) {
+    .landing .container .image img {
+        display: none;
+    }
+}
+
+.landing .container .text {
+    flex: 1;
+    max-width: 500px;
+    margin: auto;
+}
+
+.landing .container .text h2 {
+    font-size: 36px;
+}
+
+.landing .container .text p {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: rgb(0 0 0 / 50%);
+}
+
+@media (max-width: 993px) {
+    .landing .container .text {
+        text-align: center;
+    }
+}
+
+/* End Landing */
