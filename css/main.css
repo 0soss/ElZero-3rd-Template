@@ -107,8 +107,19 @@ header .container .main-nav li a {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 0 30px;
+    padding: 30px;
     font-size: 18px;
+    transition: var(--main-transition);
+}
+
+header .container .main-nav>li>a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
     transition: var(--main-transition);
 }
 
@@ -120,9 +131,13 @@ header .container .main-nav li a {
 
 }
 
-header .container .main-nav li a:hover {
+header .container .main-nav>li>a:hover {
     color: var(--main-color);
     background-color: #fafafa;
+}
+
+header .container .main-nav li a:hover::before {
+    left: 0;
 }
 
 header .container .main-nav li .sec-nav {
@@ -187,11 +202,28 @@ header .sec-nav .links li:not(:last-child) {
 }
 
 header .container .main-nav li .sec-nav ul a {
+    position: relative;
     display: block;
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
     color: var(--main-color);
+}
+
+header .container .main-nav li .sec-nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #fafafa;
+    top: 0;
+    left: 0;
+    transition: var(--main-transition);
+    z-index: -1;
+}
+
+header .container .main-nav li .sec-nav ul li a:hover::before {
+    width: 100%;
 }
 
 header .container .main-nav li .sec-nav ul a i {
