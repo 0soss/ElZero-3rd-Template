@@ -64,6 +64,18 @@ li {
     animation: bouncingY 1.5s infinite;
 }
 
+@keyframes up-down {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+}
+
 @keyframes bouncingY {
 
     0%,
@@ -400,7 +412,10 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 .landing .container .image img {
+    position: relative;
     width: 600px;
+    animation: up-down 5s linear infinite;
+
 }
 
 @media (max-width: 993px) {
