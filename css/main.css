@@ -741,4 +741,46 @@ header .container .main-nav li .sec-nav ul a i {
     z-index: 0;
 }
 
+.testimonials .container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.testimonials .container .box {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.testimonials .container .box img {
+    position: absolute;
+    width: 100px;
+    border: 10px solid var(--sec-background);
+    border-radius: 50%;
+    top: -50px;
+    right: -10px;
+}
+
+.testimonials .container .box h3 {
+    margin: 0 0 10px;
+}
+
+.testimonials .container .box .title {
+    color: gray;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.testimonials .container .box .filled {
+    color: gold;
+}
+
+.testimonials .container .box p {
+    color: gray;
+    line-height: 1.6;
+    margin: 10px 0 0;
+}
+
 /* End Testimonials */
