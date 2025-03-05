@@ -877,5 +877,101 @@ header .container .main-nav li .sec-nav ul a i {
 /* End Members */
 
 /* Start Services */
+.services {
+    background-color: var(--sec-background);
+    z-index: 0;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    counter-reset: services;
+}
+
+.services .container .box {
+    position: relative;
+    counter-increment: services;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    transition: var(--main-transition);
+}
+
+.services .container .box:hover {
+    transform: translateY(-10px);
+}
+
+.services .container .box::before {
+    position: absolute;
+    content: "";
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 0;
+    transition: var(--main-transition);
+}
+
+.services .container .box:hover::before {
+    width: 100%;
+}
+
+.services .container .box i {
+    color: rgb(0 0 0 / 20%);
+    display: block;
+    text-align: center;
+    margin: 30px auto 20px;
+    font-size: 60px;
+}
+
+.services .container .box h3 {
+    font-size: 24px;
+    width: fit-content;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin: 20px auto 30px;
+}
+
+.services .container .box div {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: end;
+    overflow: hidden;
+}
+
+.services .container .box div::before {
+    position: absolute;
+    content: "0" counter(services);
+    height: 100%;
+    width: 80px;
+    left: 0px;
+    top: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px 0 0;
+}
+
+.services .container .box div::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50px;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 80px;
+    transform: skewX(-30deg);
+}
+
+.services .container .box div a {
+    color: var(--main-color);
+}
 
 /* End Services */
