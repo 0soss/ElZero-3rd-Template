@@ -784,3 +784,98 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 /* End Testimonials */
+
+/* Start Members */
+.members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.members .container .box {
+    position: relative;
+}
+
+.members .container .box::before,
+.members .container .box::after {
+    position: absolute;
+    content: "";
+    background-color: var(--sec-background);
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 15px;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+.members .container .box::before {
+    width: calc(100% - 60px);
+}
+
+.members .container .box::after {
+    background-color: #e4e4e4;
+    width: 0;
+}
+
+.members .container .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.members .container .box .data {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 0;
+
+}
+
+.members .container .box .data img {
+    width: calc(100% - 60px);
+    border-radius: 15px;
+    transition: var(--main-transition);
+}
+
+.members .container .box:hover img {
+    filter: grayscale(100%);
+}
+
+.members .container .box .socials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.members .container .box .socials a {
+    color: rgb(0 0 0 / 50%);
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.members .container .box .content {
+    padding-left: 80px;
+    transition: var(--main-transition);
+}
+
+.members .container .box:hover .content {
+    filter: grayscale(100%);
+}
+
+.members .container .box .content h3 {
+    margin: 25px 0 0;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.members .container .box .content p {
+    margin: 10px 0 25px 0;
+}
+
+/* End Members */
+
+/* Start Services */
+
+/* End Services */
