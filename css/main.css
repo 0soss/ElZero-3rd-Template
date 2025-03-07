@@ -1145,3 +1145,108 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 /* End Works */
+
+/* Start Events */
+.events {}
+
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events .container img {
+    max-width: 400px;
+}
+
+@media (max-width:992px) {
+    .events .container img {
+        display: none;
+    }
+
+}
+
+.events .container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.events .container .content .time {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+
+.events .container .content .time .unit {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    font-size: 12px;
+    width: 75px;
+    line-height: 0.6;
+}
+
+.events .container .content .time .text {
+    padding: 10px;
+}
+
+.events .container .content .time .unit .num {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+}
+
+.events .container .content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.events .container .content p {
+    line-height: 1.7;
+    font-size: 19px;
+    color: gray;
+}
+
+.events .container .subscribe {
+    width: 100%;
+}
+
+.events .container .subscribe form {
+    padding: 30px 40px;
+    margin: 20px auto 0;
+    border-radius: 50px;
+    background: #f6f5f5;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.events .container .subscribe form input[type="email"] {
+    padding: 20px;
+    border-radius: 50px;
+    flex: 1;
+    border: none;
+    outline: none;
+    border-color: transparent;
+    caret-color: var(--main-color);
+}
+
+.events .container .subscribe form input[type="submit"] {
+    border: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* End Events */
