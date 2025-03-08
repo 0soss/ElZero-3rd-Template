@@ -1228,6 +1228,8 @@ header .container .main-nav li .sec-nav ul a i {
     justify-content: space-between;
 }
 
+
+
 .events .container .subscribe form input[type="email"] {
     padding: 20px;
     border-radius: 50px;
@@ -1247,6 +1249,17 @@ header .container .main-nav li .sec-nav ul a i {
     border-radius: 50px;
     margin-left: 20px;
     cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .events .container .subscribe form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .events .container .subscribe form input[type="submit"] {
+        margin: 10px 0 0;
+    }
 }
 
 /* End Events */
