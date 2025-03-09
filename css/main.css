@@ -201,21 +201,21 @@ li {
 /* Small */
 @media (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 750px;
     }
 }
 
 /* Medium */
 @media (min-width: 992px) {
     .container {
-        max-width: 950px;
+        max-width: 970px;
     }
 }
 
 /* Large */
 @media (min-width: 1200px) {
     .container {
-        max-width: 1150px;
+        max-width: 1170px;
     }
 }
 
@@ -752,6 +752,7 @@ header .container .main-nav li .sec-nav ul a i {
     padding: 20px;
     background-color: white;
     border-radius: 7px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 }
 
 .testimonials .container .box img {
@@ -1413,3 +1414,69 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 /* End Plans */
+
+/* Start Videos */
+.videos {}
+
+.videos .container {}
+
+.videos .container .holder {
+    display: flex;
+    border: 1px solid rgb(0 0 0 / 20%);
+}
+
+.videos .container .video-list {}
+
+.videos .container .video-list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.videos .container .video-list .name i {}
+
+.videos .container .video-list ul {}
+
+.videos .container .video-list ul li {
+    padding: 20px;
+    border-top: 1px solid rgb(0 0 0 / 20%);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.videos .container .video-list ul li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+
+.videos .container .video-list ul li span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.videos .container .preview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDD;
+    padding: 10px;
+}
+
+.videos .container .preview img {
+    max-width: 100%;
+}
+
+.videos .container .preview .info {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+}
+
+/* End Videos */
