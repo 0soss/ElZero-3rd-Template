@@ -1416,16 +1416,16 @@ header .container .main-nav li .sec-nav ul a i {
 /* End Plans */
 
 /* Start Videos */
-.videos {}
-
-.videos .container {}
-
 .videos .container .holder {
     display: flex;
     border: 1px solid rgb(0 0 0 / 20%);
 }
 
-.videos .container .video-list {}
+@media (max-width:991px) {
+    .videos .container .holder {
+        flex-direction: column;
+    }
+}
 
 .videos .container .video-list .name {
     display: flex;
@@ -1436,10 +1436,6 @@ header .container .main-nav li .sec-nav ul a i {
     color: var(--main-color);
     font-weight: bold;
 }
-
-.videos .container .video-list .name i {}
-
-.videos .container .video-list ul {}
 
 .videos .container .video-list ul li {
     padding: 20px;
@@ -1477,6 +1473,7 @@ header .container .main-nav li .sec-nav ul a i {
     padding: 20px;
     background-color: white;
     width: 100%;
+    margin-top: 10px;
 }
 
 /* End Videos */
