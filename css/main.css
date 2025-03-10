@@ -978,8 +978,6 @@ header .container .main-nav li .sec-nav ul a i {
 /* End Services */
 
 /* Start Skills */
-.our-skills {}
-
 .our-skills .container {
     display: flex;
 }
@@ -1001,8 +999,6 @@ header .container .main-nav li .sec-nav ul a i {
 .our-skills .container .skills {
     flex: 1;
 }
-
-.our-skills .container .skills .skill {}
 
 .our-skills .container .skills .skill h3 {
     font-size: 18px;
@@ -1148,8 +1144,6 @@ header .container .main-nav li .sec-nav ul a i {
 /* End Works */
 
 /* Start Events */
-.events {}
-
 .events .container {
     display: flex;
     align-items: center;
@@ -1380,8 +1374,6 @@ header .container .main-nav li .sec-nav ul a i {
     margin-bottom: 20px;
 }
 
-.plans .container .box ul {}
-
 .plans .container .box ul li {
     padding: 20px;
     border-top: 1px solid #eee;
@@ -1477,3 +1469,98 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 /* End Videos */
+
+/* Start Stats */
+.stats {
+    background-image: url(../imgs/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.stats::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+    left: 0;
+    top: 0;
+}
+
+.stats h2 {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+.stats .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    z-index: 1;
+}
+
+.stats .container .box {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    opacity: 0.7;
+    transition: var(--main-transition);
+    position: relative;
+}
+
+.stats .container .box:hover {
+    opacity: 1;
+}
+
+.stats .container .box::before,
+.stats .container .box::after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 2px;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+
+.stats .container .box::before {
+    left: 0;
+    bottom: 0;
+}
+
+.stats .container .box::after {
+    top: 0;
+    right: 0;
+}
+
+.stats .container .box:hover::before,
+.stats .container .box:hover::after {
+    height: 100%;
+}
+
+.stats .container .box i {
+    display: block;
+    font-size: 30px;
+}
+
+.stats .container .box .num {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.stats .container .box .title {
+    display: block;
+    FONT-SIZE: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--main-color);
+    font-style: italic;
+}
+
+/* End Stats */
