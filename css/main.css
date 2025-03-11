@@ -1564,3 +1564,30 @@ header .container .main-nav li .sec-nav ul a i {
 }
 
 /* End Stats */
+
+/* Start Discount */
+.discount {}
+
+.discount .image {}
+
+.discount .image h2 {}
+
+.discount .image p {}
+
+.discount .image img {
+    max-width: 100%;
+}
+
+.discount .form .content {}
+
+.discount .form .content h2 {}
+
+.discount .form .content form {}
+
+.discount .form .content form input {}
+
+.discount .form .content form textarea.input {}
+
+.discount .form .content form [type="submit"] {}
+
+/* End Discount */
