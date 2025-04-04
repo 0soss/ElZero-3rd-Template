@@ -1764,16 +1764,41 @@ footer .container .links ul li a::before {
 }
 
 
-footer .container .info {}
+footer .container .info>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #b9b9b9;
+}
 
-footer .container .temp {}
+footer .container .info div div {
+    line-height: 1.7;
+    flex: 1;
+}
 
-footer .container .temp .box {}
+footer .container .info div i {
+    color: var(--main-color);
+    font-size: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
 
-footer .container .temp .box .image {}
+footer .container .info .contact div span {
+    display: block;
+}
 
-footer .container .temp .box .image img {}
 
-footer .copyright {}
+footer .container .box img {
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
+}
+
+footer .copyright {
+    text-align: center;
+    padding: 25px 0;
+    border-top: solid 1px #444;
+    margin-top: 50px;
+}
 
 /* End Footer */
